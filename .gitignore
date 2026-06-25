@@ -5,3 +5,5 @@ virtual_env
 .pytest_
 dist
 build
+.DS_Store
+.idea/
