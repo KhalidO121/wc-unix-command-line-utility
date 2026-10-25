@@ -1,0 +1,6 @@
+[project]
+name = "wc-tool"
+version = "2026.0.0"
+
+[project.scripts]
+ccwc = "wc.main:main"

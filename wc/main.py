@@ -8,10 +8,8 @@ from wc.helpers import (
     number_of_words,
 )
 
-
 def main():
-
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(prog="ccwc")
     parser.add_argument("-c", help="number of bytes in a file", action="store_true")
     parser.add_argument("-l", help="number of lines in a file", action="store_true")
     parser.add_argument("-w", help="number of words in a file", action="store_true")
@@ -22,7 +20,7 @@ def main():
         "file",
         nargs="?",
         help="file to be processed",
-        type=argparse.FileType("r", encoding="utf-8"),
+        type=argparse.FileType("r", encoding="utf-8"), # Spent so long on one project python method got deprecated.
     )
 
     args = parser.parse_args()
@@ -40,3 +38,5 @@ def main():
         )
     elif not sys.stdin.isatty():
         print(sys.stdin.read())
+
+main()
